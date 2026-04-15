@@ -1,0 +1,5 @@
+[theme]
+primaryColor = "#f59e0b"          # Amber-500
+backgroundColor = "#0c0a09"       # Stone-950
+secondaryBackgroundColor = "#1c1917" # Stone-900
+textColor = "#fafaf9"             # Stone-50

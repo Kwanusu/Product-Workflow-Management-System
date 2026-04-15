@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows & Glassmorphism Demo</title>
+
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(45deg, #f06, #4a90e2, #9b59b6);
+        }
+
+        /* BODY */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f7fb; /* light background */
+            color: #1a1a1a;      /* dark text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            padding: 50px 0;
+        }
+
+        /* ================= TEXT SHADOW SECTION ================= */
+        .text-demo h1 {
+            font-size: 3.5rem;
+            margin: 20px 0;
+        }
+
+        .neon-text {
+            text-shadow: 
+                0 0 10px #00d2ff, 
+                0 0 20px #00d2ff, 
+                0 0 40px #00d2ff;
+        }
+
+        .layered-text {
+            color: #1a1a1a;
+            text-shadow: 
+                2px 2px 0px #4a90e2,
+                4px 4px 0px #357abd;
+        }
+
+        .soft-shadow {
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .hard-shadow {
+            text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+        }
+
+        .glow-text {
+            text-shadow: 
+                0 0 8px #ff00ff,
+                0 0 16px #ff00ff,
+                0 0 24px #ff00ff;
+        }
+
+        .outline-text {
+            color: white;
+            text-shadow:
+                -1px -1px 0 #1a1a1a,
+                 1px -1px 0 #1a1a1a,
+                -1px  1px 0 #1a1a1a,
+                 1px  1px 0 #1a1a1a;
+        }
+
+        /* ================= BOX SHADOW SECTION ================= */
+        .box-container {
+            display: flex;
+            gap: 30px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background: #ffffff;
+            color: #1a1a1a;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .elevation-shadow {
+            box-shadow: 
+                0 10px 20px rgba(0,0,0,0.15),
+                0 6px 6px rgba(0,0,0,0.1);
+        }
+
+        .inset-shadow {
+            box-shadow: 
+                inset 6px 6px 15px rgba(0,0,0,0.2),
+                inset -4px -4px 10px rgba(255,255,255,0.8);
+        }
+
+        /* ================= GLASS SECTION ================= */
+        .glass-bg {
+            width: 80%;
+            height: 300px;
+            background: var(--bg-gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .glass-card {
+            width: 250px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TEXT SHADOW DEMO -->
+    <div class="text-demo">
+        <h1 class="neon-text">Neon Glow</h1>
+        <h1 class="layered-text">Retro Stack</h1>
+        <h1 class="soft-shadow">Soft Shadow</h1>
+        <h1 class="hard-shadow">Hard Shadow</h1>
+        <h1 class="glow-text">Color Glow</h1>
+        <h1 class="outline-text">Outline Text</h1>
+    </div>
+
+    <!-- BOX SHADOW DEMO -->
+    <div class="box-container">
+        <div class="box elevation-shadow">Floating</div>
+        <div class="box inset-shadow">Pressed</div>
+    </div>
+
+    <!-- GLASSMORPHISM DEMO -->
+    <div class="glass-bg">
+        <div class="glass-card">
+            <h3>Glass Card</h3>
+            <p>Modern & Translucent</p>
+        </div>
+    </div>
+
+</body>
+</html>

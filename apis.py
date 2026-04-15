@@ -1,6 +1,6 @@
 import requests
 
-base_Url = 'https://jsonplaceholder.typicode.com/posts'
+base_Url = 'https://jsonplaceholder.typicode.com/users'
 search_terms = {
     'userId': 1,
     'completed': 'false'
